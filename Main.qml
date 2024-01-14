@@ -48,7 +48,7 @@ Window {
             songIndex: 0
             title: "Eine Kleine Nachtmusik"
             authorName: "Wolfgang Amadeus Mozart"
-            imageColor: "red"
+            imageSource: "assets/images/song1.jpg"
         }
 
 
@@ -65,7 +65,7 @@ Window {
             songIndex: 1
             title: "Symphone №5 "
             authorName: "Ludwig Van Beethoven"
-            imageColor: "yellow"
+            imageSource: "assets/images/song2.jpg"
         }
 
 
@@ -82,7 +82,7 @@ Window {
             songIndex: 2
             title: "Air on the G String"
             authorName: "Johann Sebastian Bach"
-            imageColor: "purple"
+            imageSource: "assets/images/song3.jpg"
         }
     }
 
@@ -103,35 +103,35 @@ Window {
 
             spacing: 20
 
-            TextButton{
+            ImageButton{
                 id: previousButton
 
-                width: 50
-                height: 50
+                width: 64
+                height: 64
 
-                text: "<"
+                source: "assets/icons/previous.png"
 
                 onClicked: playerController.switchToPreviousSong()
             }
 
-            TextButton{
+            ImageButton{
                 id: playPauseButton
 
-                width: 75
-                height: 50
+                width: 64
+                height: 64
 
-                text: playerController.playing ? "Pause" : "Play"
+                source: playerController.playing ? "assets/icons/pause.png" : "assets/icons/play.png"
 
                 onClicked: playerController.playPause()
             }
 
-            TextButton{
+            ImageButton{
                 id: nextButton
 
-                width: 50
-                height: 50
+                width: 64
+                height: 64
 
-                text: ">"
+                source: "assets/icons/next.png"
 
                 onClicked: playerController.switchToNextSong()
             }

@@ -17,15 +17,14 @@ qt_add_qml_module(appProtify_analogue
     VERSION 1.0
     QML_FILES Main.qml
     QML_FILES AudioInfoiBox.qml
-    QML_FILES TextButton.qml
+    QML_FILES ImageButton.qml
 
     # Add resources
     RESOURCES
+    assets/icons/app_icon.png
     assets/images/song1.jpg
     assets/images/song2.jpg
     assets/images/song3.jpg
-
-    assets/icons/app_icon.jpg
     assets/icons/next.png
     assets/icons/previous.png
     assets/icons/play.png
