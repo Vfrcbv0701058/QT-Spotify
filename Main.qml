@@ -50,6 +50,40 @@ Window {
             authorName: "Wolfgang Amadeus Mozart"
             imageColor: "red"
         }
+
+
+        AudioInfoiBox {
+            id: secondSong
+
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: parent.left
+                right: parent.right
+                margins: 20
+            }
+
+            songIndex: 1
+            title: "Symphone №5 "
+            authorName: "Ludwig Van Beethoven"
+            imageColor: "yellow"
+        }
+
+
+        AudioInfoiBox {
+            id: thirdSong
+
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: parent.left
+                right: parent.right
+                margins: 20
+            }
+
+            songIndex: 2
+            title: "Air on the G String"
+            authorName: "Johann Sebastian Bach"
+            imageColor: "purple"
+        }
     }
 
     Rectangle {
@@ -63,5 +97,9 @@ Window {
 
         height: 100
         color: "#333333"
+    }
+
+    QtObject{
+
     }
 }
