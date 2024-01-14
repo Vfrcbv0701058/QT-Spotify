@@ -40,7 +40,7 @@ Item {
     }
 
     Text{
-        id: authorText
+        id: authorName
 
         anchors{
             top: parent.verticalCenter
