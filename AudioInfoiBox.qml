@@ -8,6 +8,8 @@ Item {
     property alias authorName: authorName.text
     property alias imageColor: albumImage.color
 
+    visible: playerController.currentSongIndex === root.songIndex
+
     Rectangle{
         id: albumImage
 

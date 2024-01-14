@@ -14,9 +14,9 @@ Item {
         anchors.fill: parent
 
         color: if (buttonMouseArea.containsPress) {
-                    return Qt.lighter(root.color)
-               } else if (buttonMouseArea.containsMouse) {
                     return Qt.darker(root.color)
+               } else if (buttonMouseArea.containsMouse) {
+                    return Qt.lighter(root.color)
                } else {
                     return root.color
                }

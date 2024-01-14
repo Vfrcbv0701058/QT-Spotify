@@ -97,6 +97,45 @@ Window {
 
         height: 100
         color: "#333333"
+
+        Row{
+            anchors.centerIn: parent
+
+            spacing: 20
+
+            TextButton{
+                id: previousButton
+
+                width: 50
+                height: 50
+
+                text: "<"
+
+                onClicked: playerController.switchToPreviousSong()
+            }
+
+            TextButton{
+                id: playPauseButton
+
+                width: 75
+                height: 50
+
+                text: playerController.playing ? "Pause" : "Play"
+
+                onClicked: playerController.playPause()
+            }
+
+            TextButton{
+                id: nextButton
+
+                width: 50
+                height: 50
+
+                text: ">"
+
+                onClicked: playerController.switchToNextSong()
+            }
+        }
     }
 
     QtObject{
