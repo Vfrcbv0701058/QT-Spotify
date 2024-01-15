@@ -10,6 +10,8 @@ qt_standard_project_setup()
 
 qt_add_executable(appProtify_analogue
     main.cpp
+    PlayerController.h
+    PlayerController.cpp
 )
 
 qt_add_qml_module(appProtify_analogue
