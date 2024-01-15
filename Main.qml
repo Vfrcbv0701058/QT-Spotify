@@ -82,7 +82,6 @@ Window {
             songIndex: 2
             title: "Air on the G String"
             authorName: "Johann Sebastian Bach"
-            imageSource: "assets/images/song3.jpg"
             videoSource: "qrc:/Protify_analogue/assets/videos/video_1.mp4"
         }
     }
