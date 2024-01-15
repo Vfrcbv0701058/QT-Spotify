@@ -21,6 +21,9 @@ qt_add_qml_module(appProtify_analogue
     QML_FILES AudioInfoiBox.qml
     QML_FILES ImageButton.qml
 
+    SOURCES
+    AudioInfo.h AudioInfo.cpp
+
     # Add resources
     RESOURCES
     assets/icons/app_icon.png
@@ -34,6 +37,10 @@ qt_add_qml_module(appProtify_analogue
     assets/icons/pause.png
 
     assets/videos/video_1.mp4
+
+    assets/audio/air_on_the_g_string.mp3
+    assets/audio/eine_kleine_nachtmusik.mp3
+    assets/audio/symphony_no_5.mp3
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

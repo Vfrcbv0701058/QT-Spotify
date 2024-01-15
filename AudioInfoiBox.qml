@@ -1,18 +1,15 @@
 import QtQuick
 import QtMultimedia
 import com.company.PlayerController
-
+import Protify_analogue
 
 Item {
     id: root
 
-    required property int songIndex
-    property alias title: titleText.text
-    property alias authorName: authorName.text
-    property alias imageSource: albumImage.source
-    property alias videoSource: albumVideo.source
+    // создали провайдера данных из с++ класса и теперь все достаем с infoProvider
+    readonly property AudioInfo infoProvider: AudioInfo {}
 
-    visible: PlayerController.currentSongIndex === root.songIndex
+    visible: PlayerController.currentSongIndex === infoProvider.songIndex
 
     Image {
         id: albumImage
@@ -24,6 +21,8 @@ Item {
 
         width: 150
         height: 150
+
+        source: infoProvider.imageSource
     }
 
     Video{
@@ -36,6 +35,8 @@ Item {
 
         width: 150
         height: 150
+
+        source: infoProvider.videoSource
 
         loops: MediaPlayer.Infinite
         volume: 0
@@ -53,6 +54,7 @@ Item {
 
         color: "white"
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        text: infoProvider.title
 
         font{
         pixelSize: 20
@@ -72,6 +74,7 @@ Item {
 
         color: "gray"
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        text: infoProvider.authorName
 
         font{
             pixelSize: 16
@@ -81,9 +84,16 @@ Item {
     onVisibleChanged: {
         if(visible){
             albumVideo.play()
+            PlayerController.changeAudioSource(infoProvider.songSource)
         } else {
             albumVideo.seek(0)
             albumVideo.stop()
+        }
+    }
+
+    Component.onCompleted: {
+        if (PlayerController.currentSongIndex === infoProvider.songIndex) {
+            PlayerController.changeAudioSource(infoProvider.songSource)
         }
     }
 }

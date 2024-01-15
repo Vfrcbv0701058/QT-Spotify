@@ -1,6 +1,8 @@
 #ifndef PLAYERCONTROLLER_H
 #define PLAYERCONTROLLER_H
 
+// добавили заголовок что бы работал проигрыватель песен
+#include <QMediaPlayer>
 #include <QObject>
 
 class PlayerController : public QObject
@@ -26,6 +28,7 @@ public:
 public slots:
     void switchToPreviousSong();
     void playPause();
+    void changeAudioSource(const QUrl &source);
 
 signals:
     void currentSongIndexChanged();
@@ -36,6 +39,8 @@ private:
     int m_currentSongIndex = 0;
     int m_songCount = 3;
     bool m_playing = false;
+    // добавили переменную проигрывателя
+    QMediaPlayer m_mediaPlayer;
 };
 
 #endif // PLAYERCONTROLLER_H

@@ -46,10 +46,13 @@ Window {
                 margins: 20
             }
 
-            songIndex: 0
-            title: "Eine Kleine Nachtmusik"
-            authorName: "Wolfgang Amadeus Mozart"
-            imageSource: "assets/images/song1.jpg"
+            infoProvider {
+                songIndex: 0
+                title: "Eine Kleine Nachtmusik"
+                authorName: "Wolfgang Amadeus Mozart"
+                imageSource: "assets/images/song1.jpg"
+                songSource: "qrc:/Protify_analogue/assets/audio/eine_kleine_nachtmusik.mp3"
+            }
         }
 
 
@@ -63,10 +66,13 @@ Window {
                 margins: 20
             }
 
-            songIndex: 1
-            title: "Symphone №5 "
-            authorName: "Ludwig Van Beethoven"
-            imageSource: "assets/images/song2.jpg"
+            infoProvider {
+                songIndex: 1
+                title: "Symphone №5 "
+                authorName: "Ludwig Van Beethoven"
+                imageSource: "assets/images/song2.jpg"
+                songSource: "qrc:/Protify_analogue/assets/audio/symphony_no_5.mp3"
+            }
         }
 
 
@@ -80,10 +86,13 @@ Window {
                 margins: 20
             }
 
-            songIndex: 2
-            title: "Air on the G String"
-            authorName: "Johann Sebastian Bach"
-            videoSource: "qrc:/Protify_analogue/assets/videos/video_1.mp4"
+            infoProvider{
+                songIndex: 2
+                title: "Air on the G String"
+                authorName: "Johann Sebastian Bach"
+                videoSource: "qrc:/Protify_analogue/assets/videos/video_1.mp4"
+                songSource: "qrc:/Protify_analogue/assets/audio/air_on_the_g_string.mp3"
+            }
         }
     }
 
