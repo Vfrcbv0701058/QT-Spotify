@@ -4,7 +4,7 @@ project(Protify_analogue VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
+find_package(Qt6 6.6 REQUIRED COMPONENTS Multimedia Quick)
 
 qt_standard_project_setup()
 
@@ -25,10 +25,13 @@ qt_add_qml_module(appProtify_analogue
     assets/images/song1.jpg
     assets/images/song2.jpg
     assets/images/song3.jpg
+
     assets/icons/next.png
     assets/icons/previous.png
     assets/icons/play.png
     assets/icons/pause.png
+
+    assets/videos/video_1.mp4
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -43,7 +46,7 @@ set_target_properties(appProtify_analogue PROPERTIES
 )
 
 target_link_libraries(appProtify_analogue
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick Qt6::Multimedia
 )
 
 include(GNUInstallDirs)
